@@ -7,8 +7,9 @@
     "webpack-server": "webpack-dev-server --hot --progress --colors --inline",
     "nodemon-server": "nodemon server/server.js",
     "dev": "npm run webpack-server & npm run nodemon-server",
-    "start": "node server/server.js",
-    "postinstall": "NODE_ENV=production webpack -p"
+    "build": "NODE_ENV=production webpack -p",
+    "start": "npm run build & node server/server.js"
+
   },
   "author": "",
   "license": "ISC",
