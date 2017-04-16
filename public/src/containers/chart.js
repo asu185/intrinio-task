@@ -19,9 +19,9 @@ class Chart extends Component {
   }
 
   renderChart() {
-    let company = this.props.stock.company;
+    let item = this.props.stock.item;
     let dates = this.props.stock.dates;
-    let values = this.props.stock.values;    
+    let values = this.props.stock.values;
     let chart = c3.generate({
       bindto: '#chart',
       data: {
@@ -37,15 +37,23 @@ class Chart extends Component {
           tick: {
             format: '%Y-%m-%d'
           }
-        }
+        },
+        y: {
+          label: {
+            text: item,
+            position: 'outer-middle'
+          }
+        },
       }
     });
   }
 
   render() {
+    let identifier = this.props.stock.identifier;
     this.renderChart();
     return (
       <div>
+        <h1>{identifier}</h1>
         <div id="chart"></div>
         <div id="data-from-tag" style={tagStyle}>Data from Intrinio</div>
       </div>

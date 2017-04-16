@@ -8,6 +8,6 @@ app.use(express.static(path.join(__dirname,"../public")));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.listen(8888, function(){
-    console.log("Started listening on port", 8888);
+app.listen(process.env.PORT || 3000, function(){
+    console.log("Started listening on port", this.address().port);
 })

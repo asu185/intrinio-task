@@ -14,7 +14,8 @@ export function setStockInfo(payload) {
 
   return {
     type: GET_STOCK_INFO,
-    company: payload.identifier,
+    identifier: payload.identifier,
+    item: payload.item,
     dates: dates,
     values: values
   };

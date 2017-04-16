@@ -7,7 +7,8 @@ const stock = (state = {
   switch (action.type) {
     case Actions.GET_STOCK_INFO:
       return Object.assign({}, state, {
-        company: action.company,
+        identifier: action.identifier,
+        item: action.item,
         dates: action.dates,
         values: action.values
       });
