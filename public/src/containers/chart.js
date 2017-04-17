@@ -1,6 +1,8 @@
 import React from 'react';
 import { Component } from 'react';
 import { connect } from 'react-redux';
+import c3 from 'c3';
+import 'c3/c3.css';
 import { getStockInfo } from '../actions/index';
 
 const tagStyle = {

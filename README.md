@@ -3,7 +3,6 @@ The project shows GE's average daily volume in a chart with c3.js.
 
 ```
 $npm install
-$bower install
 ```
 
 For dev mode

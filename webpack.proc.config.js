@@ -1,5 +1,4 @@
-module.exports = {
-  devtool: 'source-map',
+module.exports = {  
   entry: {
     main: './public/src/main.js'
   },
